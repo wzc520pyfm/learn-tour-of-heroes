@@ -1,6 +1,9 @@
 {
-  "name": "angular-tour-of-heroes",
+  "name": "learn-tour-of-heroes",
   "version": "0.0.0",
+  "author": {
+    "name": "wzc520pyfm"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
