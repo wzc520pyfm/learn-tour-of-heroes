@@ -8,12 +8,5 @@
   </li>
 </ul>
 
-<div *ngIf="selectedHero">
-  <!-- 使用内置管道UppercasePipe将首字母转为大写 -->
-  <h2>{{selectedHero.name | uppercase}} Details</h2>
-  <div>id: {{selectedHero.id}}</div>
-  <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
-  </div>
-</div>
+<!-- 属性绑定语法 -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
