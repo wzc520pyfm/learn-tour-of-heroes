@@ -1,0 +1,14 @@
+<div id="search-component">
+  <label for="search-box">Hero Search</label>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <!-- $符号约定heroes$是一个Observable而不是数组  -->
+    <!-- 使用AsyncPipe管道从一个Observable中解出一个值 -->
+    <li *ngFor="let hero of heroes$ | async" >
+      <a routerLink="/detail/{{hero.id}}">
+        {{hero.name}}
+      </a>
+    </li>
+  </ul>
+</div>
