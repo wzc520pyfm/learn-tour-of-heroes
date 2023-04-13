@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## record
+
+### 创建模块
+
+> ng generate module app-routing --flat --module=app
+
+* `--flat` 把这个文件放进了 `src/app` 中，而不是单独的目录中。
+* `--module=app` 告诉 `ng generate` 把它注册到 `AppModule` 的 `imports` 数组中。

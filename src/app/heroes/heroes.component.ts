@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
-import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-heroes',
@@ -11,7 +10,6 @@ import { MessageService } from '../message.service';
 })
 export class HeroesComponent implements OnInit {
 
-  selectedHero?: Hero;
   hero: Hero = {
     id: 1,
     name: 'Windstorm'
@@ -19,19 +17,11 @@ export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = [];
 
-  constructor(
-    private heroService: HeroService,
-    private messageService: MessageService
-  ) { }
+  constructor(private heroService: HeroService) { }
 
   // 组件的生命周期函数, 可在此执行初始化操作
   ngOnInit(): void {
     this.getHeroes();
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
   }
 
   getHeroes(): void {
